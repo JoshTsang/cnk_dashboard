@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal"
+    android:gravity="center_vertical"
     android:background="@drawable/item_todo_bg" >
     <TextView android:id="@+id/tableName"
         android:layout_width="150dip"
    		android:layout_height="fill_parent"
+   		android:layout_alignParentLeft="true"
    		android:gravity="center"
    		android:textSize="60dip"
    		android:textColor="#000000">
     </TextView>
+    <TextView  android:id="@+id/quantity"
+        android:layout_width="90dip"
+   		android:layout_height="match_parent"
+   		android:layout_alignParentRight="true"
+   		android:textSize="90dip"
+   		android:textColor="#000000">
+   	</TextView>
     <TextView android:id="@+id/dishName"
         android:layout_width="match_parent"
    		android:layout_height="match_parent"
+   		android:layout_toRightOf="@id/tableName"
+   		android:layout_toLeftOf="@id/quantity"
    		android:textSize="90dip"
    		android:textColor="#000000">
     </TextView>
-</LinearLayout>
+</RelativeLayout>
